@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-style: Arial,sans-serif;
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background-image: url(background.jpg);
+    background-color: rgba(170, 168, 168, 0.4);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .logo {
@@ -18,11 +31,15 @@
 }
 
 .Navbar {
+    width: 100%;
     background-color: rgba(124, 75, 14, 0.726);
     display: flex;
     justify-content: space-around;
     align-items: center;
     border: 2px solid rgb(70, 51, 25);
+    position:fixed;
+    top: 0;
+    z-index: 1000;
 
 }
 .Navbar_item {
@@ -57,7 +74,7 @@ a {
     font-weight: 500;
     color: white;
     font-size: larger;
-    font-family: cursive;
+    
     display: block;
 }
 .Ussop_intro {
@@ -66,13 +83,8 @@ a {
     align-content: stretch;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url(background.jpg);
-    background-color: rgba(170, 168, 168, 0.4);
-    height: 100vh;
-    background-position: center;
-    background-size: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    margin: 2rem;
+    
     
 }
 .Ussop_intro_img {
@@ -100,12 +112,12 @@ a {
    
 }
 .heading_intro {
-    font-family: "Raleway", sans-serif;
+    
     font-weight: 300;
     font-size: 300%;
     color: #0c0c0c;
     
-    text-shadow: 2px 2px 4px rgba(240, 147, 7, 0.582);
+    text-shadow: 2px 2px 4px rgba(250, 151, 4, 0.582);
     
    
 }
@@ -131,11 +143,10 @@ a {
 }
 .About {
     text-decoration: underline;
-    text-decoration-color: rgb(255, 178, 62);
-    color: rgb(248, 142, 4);
+    color: rgb(95, 58, 2);
+    text-decoration: underline;
+    text-decoration-color: rgb(70, 40, 1);
     font-size: 250%;
-   
-   
 }
 
 .About_text {
@@ -151,12 +162,355 @@ a {
     justify-content: center;
     flex-direction: row;
     margin: 4rem;
-    background-color: rgb(133, 83, 23);
-    border-radius: 4rem;
+    background-color: rgb(167, 119, 61);
+    border: 0.5rem solid burlywood;
+    border-radius: 5rem ;
 }
 .About_text_long {
     margin: 3rem;
+    font-size: large;
 }
+
+.More_about {
+    display: grid;    
+    justify-items: center;
+    background-color: rgb(167, 119, 61);
+    border: 0.5rem solid burlywood;
+    border-radius: 5rem ;
+    margin: 5rem;
+}
+.More_about_heading {
+    font-size: 2.5rem;
+    margin: 2rem;
+    font-weight: 800;
+    color: rgb(95, 58, 2);
+    text-decoration: underline;
+    text-decoration-color: rgb(70, 40, 1);
+}
+.More_About_Childhood_img {
+    height: 20rem;
+}
+.More_About_Childhood_para {
+    margin: 3rem;
+    font-size: larger;
+}
+.Shop {
+    background-color: rgb(167, 119, 61);
+    border: 0.5rem solid burlywood;
+    border-radius: 5rem ;
+    margin:4rem;
+}
+.product{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    margin: 4rem;
+    justify-content: center;
+}
+
+ 
+.card {
+    width: 20rem;
+    height: 30rem;
+    padding: .8em;
+    background: #f5f5f5;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border: 0.5rem solid burlywood;
+    border-radius: 2rem ;
+   }
+   
+   .card-img {
+    background-image: url(Ussop2.jpg);
+    height: 70%;
+    width: 100%;
+    border-radius: .5rem;
+    transition: .3s ease;
+    background-size: 20rem;
+    background-repeat: no-repeat;
+   }
+   
+   .card-info {
+    padding-top: 10%;
+    color: #b45312;
+   }
+   
+   svg {
+    width: 20px;
+    height: 20px;
+   }
+   
+   .card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+   }
+   
+   /*Text*/
+   .text-title {
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
+   }
+   
+   .text-body {
+    font-size: .9em;
+    padding-bottom: 10px;
+   }
+   
+   /*Button*/
+   .card-button {
+    border: 1px solid #252525;
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+    
+   }
+   
+   /*Hover*/
+   .card-img:hover {
+    transform: translateY(-25%);
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+   }
+   
+   .card-button:hover {
+    border: 1px solid #ffcaa6;
+    background-color: #ffcaa6;
+   }
+   .Contact {
+    background-color: rgb(167, 119, 61);
+    border: 0.5rem solid burlywood;
+    border-radius: 5rem ;
+    margin:4rem;
+   }
+
+   /* From Uiverse.io by Sr-Ajo */ 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 90rem;
+    background-color:#deb887;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .message {
+    color: #deb887;
+    font-size: 14px;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid #deb887;
+    border-radius: 5px;
+  }
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: #deb887;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color: rgb(128, 109, 0);
+  }
+  
+  .input01 {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid #917935;
+    border-radius: 5px;
+  }
+  
+  .form label .input01 + span {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    color: #deb887;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input01:placeholder-shown + span {
+    top: 40px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input01:focus + span,.form label .input01:valid + span {
+    top: 50px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input01:valid + span {
+    color: rgb(128, 98, 0);
+  }
+  
+  .fancy {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #918035;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #deb887;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 390;
+    letter-spacing: 2px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 8px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+  }
+  
+  .fancy::before {
+    content: " ";
+    width: 1.7rem;
+    height: 2px;
+    background: #deb887;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform: translateX(230%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+  }
+  
+  .fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #deb887;
+    transform: translateX(30%);
+  }
+  
+  .fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #deb887;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+  }
+  
+  .fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #deb887;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+  
+  .fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #deb887;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+  
+  .fancy:hover {
+    color:#deb887;
+    background: #deb887;
+  }
+  
+  .fancy:hover::before {
+    width: 1.5rem;
+    background: #deb887;
+  }
+  
+  .fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+  }
+  
+  .fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+  }
+  
+  .fancy:hover .bottom-key-1,
+   .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+  }
+  .Contact_img{
+    width: 20vh;
+ }
+ .head_imag{
+    display: flex ;
+    justify-content: space-around;
+    
+    align-items: center;
+}
+ .contact_img_s{
+    height: 70vh;
+}
+.form_img {
+    Margin: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
 
 
 
