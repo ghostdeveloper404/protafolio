@@ -5,19 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="R.png" type="image/x-icon">
+  
   <title>Document</title>
-</head>
-
+  
+</head>                   
+    
 <body>
   <header class="header">
     <nav class="Navbar">
       <img src="R.png" alt="logo" class="logo">
-      <ul class="Navbar_item">
+      <ul class="Navbar_item" id="nav-menu">
         <li><a href="#Ussop_intro">Ussop</a></li>
         <li><a href="#About_text_img">About</a></li>
         <li><a href="#Shop">Shop</a></li>
         <li><a href="#Contact">Contact</a></li>
       </ul>
+      <button class="menu-icon" id="nav-menu">&#9776;</button>
     </nav>
     <div class="Ussop_intro" id="Ussop_intro">
       <img class="Ussop_intro_img" src="Ussop.jpg" alt="Ussop">
@@ -337,6 +341,13 @@
         });
       });
     });
+
+    const menuicon = document.getElementById('menu-icon');
+    const navManu = document.getElementById('nav-menu');
+
+    menuicon.addEventListener('click',() => {
+      navManu.classList.toggle("active");
+    })
   </script>
  
   
